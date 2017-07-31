@@ -1,20 +1,20 @@
 <template>
   <main id="app">
-    <Header></Header>
+    <HeaderApp></HeaderApp>
     <router-view></router-view>
-    <Footer></Footer>
+    <FooterApp></FooterApp>
   </main>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import HeaderApp from "./components/Header";
+import FooterApp from "./components/Footer";
 
 export default {
   name: 'app',
   components: {
-    Header,
-    Footer
+    HeaderApp,
+    FooterApp
   }
 }
 </script>
