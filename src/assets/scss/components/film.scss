@@ -1,0 +1,43 @@
+.film {
+    color: #ccc;
+    padding: 30px 0;
+
+    .title {
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .film-image {
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .film-content {
+        text-align: left;
+
+        > * {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+  .film {
+    display: flex;
+
+    .title {
+        text-align: left;
+    }
+
+    .film-image, .film-content {
+        width: 50%;
+    }
+
+    .film-content {
+        margin-left: 20px;
+    }
+  }
+}
