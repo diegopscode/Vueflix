@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import HeaderApp from "./components/Header";
-import FooterApp from "./components/Footer";
+import HeaderApp from './components/Header'
+import FooterApp from './components/Footer'
 
 export default {
   name: 'app',
@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "./assets/scss/app.scss";
+  @import "./assets/scss/app.scss"
 </style>
