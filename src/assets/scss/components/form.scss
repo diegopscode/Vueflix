@@ -25,6 +25,10 @@
         &:focus {
             border-color: $green;
         }
+
+        &.login-name {
+            max-width: 400px;
+        }
     }
 }
 

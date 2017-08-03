@@ -4,7 +4,7 @@
 
       <form class="form-login" @submit.prevent="login(user)">
         <div class="form-group">
-            <input type="text" class="form-input text-center" placeholder="What's your name?" v-model="user.name" maxlength="32">
+            <input type="text" class="form-input text-center login-name" placeholder="What's your name?" v-model="user.name" maxlength="32">
         </div>
 
         <div class="form-button">

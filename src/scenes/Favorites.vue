@@ -5,7 +5,7 @@
     <div class="film-container">
       <Film :data="film" v-for="film in films" :key="film.show_id"></Film>
 
-      <div class="film-notfound" v-if="films.length == 0">You still have no favorite movies! <i class="fa fa-frown-o"></i></div>
+      <div class="film-notfound" v-if="films && films.length == 0">You still have no favorite movies! <i class="fa fa-frown-o"></i></div>
     </div>
 
     </div>

@@ -20,10 +20,12 @@ export default {
     })
   },
 
-  AUTH ({commit}) {
+  AUTH ({commit, dispatch}) {
     let auth = local.get("auth")
 
     if(!auth) {
+      console.log("Usuário não está logado!");
+      dispatch("LOGOUT")
       return false
     } else {
       commit("SET_USER", local.get("users").find(item => item.name == auth))
@@ -35,18 +37,20 @@ export default {
     let users = local.get("users")
     let userLogged
 
+    user.name = user.name.toLowerCase()
+
     if(!users) {
       users = []
       local.set("users", users)
     }
 
-    userLogged = users.find(item => item.name == user.name.toLowerCase())
+    userLogged = users.find(item => item.name == user.name)
 
     if(userLogged) {
 
       commit("SET_USER", userLogged)
     } else {
-      user.name = user.name.toLowerCase()
+      user.name = user.name
       users.push(user)
       local.set("users", users)
       commit("SET_USER", user)

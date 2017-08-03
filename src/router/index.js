@@ -21,7 +21,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/favorites',
+      path: '/app/favorites',
       name: 'Favorites',
       component: Favorites
     }

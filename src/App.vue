@@ -18,8 +18,9 @@ export default {
   },
   mounted() {
     this.$store.dispatch('AUTH').then( auth => {
-      if (!auth)
+      if (!auth) {
         this.$router.push({ name: "Login" });
+      }   
     })
   }
 }
