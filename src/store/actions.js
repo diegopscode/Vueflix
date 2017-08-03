@@ -40,7 +40,7 @@ export default {
       local.set("users", users)
     }
 
-    userLogged = users.find(item => item.name == user.name)
+    userLogged = users.find(item => item.name == user.name.toLowerCase())
 
     if(userLogged) {
 

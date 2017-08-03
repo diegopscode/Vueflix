@@ -30,7 +30,6 @@
     },
     methods: {
       logout() {
-        console.log("Logout");
         this.$store.dispatch("LOGOUT").then(response => { this.$router.push({ name: "Login" }) })
       }
     }
