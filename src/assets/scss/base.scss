@@ -10,8 +10,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-color: #141414;
-    color: #f1f1f1;
+    background-color: $black;
+    color: $white;
     font-size: 14px;
 }
 
@@ -30,7 +30,7 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: $green;
 }
 
 input, button {
