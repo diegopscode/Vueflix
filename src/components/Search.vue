@@ -1,26 +1,26 @@
 <template>
   <div class="search">
-    <div class="search-content">
-            
-        <form class="form-search" @click.prevent="searchFilm()">
-            <div class="form-group search-input">
-                <input type="text" class="form-input" placeholder="Title">
-            </div>
+  <div class="search-content">
 
-            <div class="form-group search-input">
-                <input type="text" class="form-input"  placeholder="Director">
-            </div>
+    <form class="form-search" @submit.prevent="searchFilm()">
+      <div class="form-group search-input">
+        <input type="text" class="form-input" placeholder="Title" v-model="search.title">
+      </div>
 
-            <div class="form-group search-input">
-                <input type="text" class="form-input"  placeholder="Actor">
-            </div>
+      <div class="form-group search-input">
+        <input type="text" class="form-input"  placeholder="Director" v-model="search.director">
+      </div>
 
-            <div class="form-button">
-                <button class="btn btn-submit">Search</button>
-            </div>
-        </form>
+      <div class="form-group search-input">
+        <input type="text" class="form-input"  placeholder="Actor" v-model="search.actor">
+      </div>
 
-    </div>
+      <div class="form-button">
+        <button class="btn btn-submit">Search</button>
+      </div>
+    </form>
+
+  </div>
   </div>
 </template>
 
@@ -28,14 +28,18 @@
   export default {
     name: 'search',
     data () {
-        return {
-            search: {}
+      return {
+        search: {
+          title: "Attack on Titan",
+          director: "",
+          actor: ""
         }
+      }
     },
     methods: {
-        searchFilm() {
-            console.log(this.search);
-        }
+      searchFilm() {
+        this.$store.dispatch('SEARCH_FILM', this.search).then(data => { this.$emit('search', data) })
+      }
     }
   }
 </script>

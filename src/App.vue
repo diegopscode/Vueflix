@@ -15,6 +15,12 @@ export default {
   components: {
     HeaderApp,
     FooterApp
+  },
+  mounted() {
+    this.$store.dispatch('AUTH').then( auth => {
+      if (!auth)
+        this.$router.push({ name: "Login" });
+    })
   }
 }
 </script>

@@ -2,10 +2,42 @@
     color: #ccc;
     padding: 30px 0;
 
+    .title-container {
+        position: relative;
+
+        .favorite {
+            cursor: pointer;
+            font-size: 18px;
+
+            position: absolute;
+            top: 2px;
+            right: 0;
+
+            .label-icon {
+                position: relative;
+                top: -2px;
+                font-size: 14px;
+            }
+
+            &:hover {
+                i {
+                    color: $green;
+                }
+            }
+
+            &.active {
+                color: $green;
+                i:before {
+                    content: "\f005";
+                }
+            }
+        }
+    }
+
     .title {
         font-weight: bold;
-        text-align: center;
         margin-bottom: 20px;
+        padding-right: 80px;
     }
 
     .film-image {
@@ -24,13 +56,13 @@
     }
 }
 
+.film-notfound {
+    padding: 30px 0;
+}
+
 @media screen and (min-width: 480px) {
   .film {
     display: flex;
-
-    .title {
-        text-align: left;
-    }
 
     .film-image, .film-content {
         width: 50%;
