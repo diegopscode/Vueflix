@@ -12,6 +12,7 @@ body {
 
     background-color: #141414;
     color: #f1f1f1;
+    font-size: 14px;
 }
 
 h1, h2 {
@@ -30,4 +31,9 @@ li {
 
 a {
   color: #42b983;
+}
+
+input, button {
+  outline: none;
+  -webkit-appearance: none;
 }
