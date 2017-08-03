@@ -10,6 +10,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 180px;
+
+    margin: 0 auto;
+  }
+
+  .user-menu {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 16px;
+  }
+
+  .user-link {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  .logout {
+    cursor: pointer;
+    transition: all .2s;
+
+    i {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      color: $green;
+    }
   }
 
   .logo {
