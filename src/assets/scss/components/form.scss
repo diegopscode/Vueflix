@@ -15,7 +15,7 @@
     .form-input {
         font-size: 14px;
         padding: 10px;
-        color: #333;
+        color: #111;
         border: 2px solid white;
         border-radius: 2px;
         width: 100%;
@@ -61,6 +61,14 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+
+        > div {
+            width: 20%;
+        }
+
+        .btn.btn-submit {
+            width: 100%;
+        }
     }
 
     .btn {
